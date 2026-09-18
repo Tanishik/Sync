@@ -18,3 +18,10 @@ Sync is a modern, responsive real-time messaging application built with **Flutte
 * **Framework:** Flutter (Dart)
 * **Backend:** Firebase (Authentication & Cloud Firestore)
 * **UI & Styling:** Custom Flutter Widgets & Material Design
+
+ Architecture & System Design
+
+Sync follows a modular, layered architecture separating the presentation layer, domain services,and external integrations to ensure scalability and clean code separation.
+
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/719c28d9-3f48-4208-95a8-7058646efc82" />
+
