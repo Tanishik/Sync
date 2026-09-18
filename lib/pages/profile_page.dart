@@ -11,6 +11,82 @@ class ProfilePage extends StatelessWidget {
 
   final AuthService _authService = AuthService();
 
+  void showAlertDialog (BuildContext context){
+
+    showDialog(context: context,
+     builder: (context) {
+
+      return AlertDialog(
+            backgroundColor: Theme.of(context).colorScheme.secondary,
+            title: Text(
+              'Log Out?',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.inversePrimary,
+                fontSize: 22,
+                fontFamily: 'Montserrat',
+              ),
+            ),
+
+            actions: [
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                   
+
+                    const SizedBox(height: 20),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        MaterialButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'Cancel',
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.inversePrimary,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
+                        ),
+
+                        MaterialButton(
+                          onPressed: ()  {
+
+                            _authService.signOut();
+                          
+                            Navigator.pop(context);
+                          },
+                          child: const Text(
+                            'Log Out!',
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          );
+        
+       
+     },);
+
+    
+      
+    }
+
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +169,7 @@ class ProfilePage extends StatelessWidget {
           ),
 
           GestureDetector(
-            onTap: _authService.signOut,
+            onTap: () =>  showAlertDialog(context),
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 18),
               decoration: BoxDecoration(
