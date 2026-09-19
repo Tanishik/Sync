@@ -1,6 +1,7 @@
 Sync 
 
-<img width="3840" height="2160" alt="Banner (1)" src="https://github.com/user-attachments/assets/79f81c4b-e32f-4752-9a28-7e6551f6eee2" />
+<img width="3840" height="2160" alt="Banner (1)" src="https://github.com/user-attachments/assets/952ac6fe-d0a0-4c21-82b2-8a9db4c39f63" />
+
 
 
 
@@ -25,6 +26,7 @@ Sync is a modern, responsive real-time messaging application built with **Flutte
 
 Sync follows a modular, layered architecture separating the presentation layer, domain services,and external integrations to ensure scalability and clean code separation.
 
-<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/f1d33c14-63cd-4dea-affb-4ee51683e6dc" />
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/4145adc3-d90f-455c-b0b3-c089d4cb32cb" />
+
 
 
